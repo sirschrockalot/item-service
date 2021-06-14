@@ -14,6 +14,9 @@ spring:
     - local
   cache:
     type: caffeine
+  data:
+    mongodb:
+       uri: mongodb+srv://test_user:test@item-cluster.tzqgu.mongodb.net/items?retryWrites=true&w=majority
 management:
   endpoints:
     web:
