@@ -15,6 +15,7 @@ import com.google.gson.GsonBuilder;
 @SpringBootApplication
 @RestController
 //@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin
 @RequestMapping(value = "/items", produces = { "application/json" })
 public class ItemServiceApplication {
 	@Autowired
