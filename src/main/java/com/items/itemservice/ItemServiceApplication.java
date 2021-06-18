@@ -16,10 +16,10 @@ import com.google.gson.GsonBuilder;
 @RestController
 //@CrossOrigin(origins = "http://localhost:3000")
 @CrossOrigin
-@RequestMapping(value = "/items", produces = { "application/json" })
+@RequestMapping(value = "/products", produces = { "application/json" })
 public class ItemServiceApplication {
 	@Autowired
-	private ItemRepository itemRepo;
+	private ProductsRepository productsRepo;
 	
 	
 
@@ -30,14 +30,14 @@ public class ItemServiceApplication {
 	@GetMapping
 	public String getItems() {
 		Gson gson = new GsonBuilder().create();
-		return gson.toJson(itemRepo.findAll());
+		return gson.toJson(productsRepo.findAll());
 	}
 	
 	
 	@GetMapping(value="/type")
 	public String getItems(@RequestParam("searchCriteria")String searchCriteria) {
 		Gson gson = new GsonBuilder().create();
-		return gson.toJson(itemRepo.findByType(searchCriteria));
+		return gson.toJson(productsRepo.findByType(searchCriteria));
 	}
 
 }

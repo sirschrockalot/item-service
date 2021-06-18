@@ -6,9 +6,9 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ItemRepository extends MongoRepository<Item, String>{
+public interface ProductsRepository extends MongoRepository<Products, String>{
 	
-	List<Item> findByType(String type);
+	List<Products> findByType(String type);
 	
 
 }
