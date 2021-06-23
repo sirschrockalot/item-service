@@ -9,9 +9,6 @@ server:
 spring:
   application:
     name:ITEM-SERVICE
-  profiles:
-    active:
-    - local
   cache:
     type: caffeine
   data:

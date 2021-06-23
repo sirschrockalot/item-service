@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +19,8 @@ public class Products {
 	private String image_url;
 	private String price;
 	private List<Variants> variants;
+	@JsonIgnore
+	private String qty;
 //	private List<String> flavors;
 //	private List<Sizes> sizes;
 	
