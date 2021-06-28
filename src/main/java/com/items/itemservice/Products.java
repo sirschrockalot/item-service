@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
-@Document(collection = "products")
+@Document(collection = "items")
 @Getter @Setter
 public class Products {
 	

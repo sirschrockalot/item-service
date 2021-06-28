@@ -1,9 +1,11 @@
 package com.items.itemservice;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,6 +18,8 @@ public class Cart {
 	private String id;
 	private Customer customer;
 	private double totalCost;
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+	private Date createdDate = new Date();
 
 	private List<CartProducts> products;
 
